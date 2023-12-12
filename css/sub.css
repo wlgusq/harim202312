@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+/* pc 해상도일 때 저용되는 서식 */
+@media screen and (min-width:1025px) {
+
+/* toggle버튼, 장바구니 숨기기 */
+.c_btn,
+.cart_btn,
+.total_btn {display: none;}
+
+/* 콘텐츠 중앙에 배치하기 */
+.h_top, .gnb > ul, .f_top, .f_bottom > ul, address{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  z-index: 1000;
+}
+
+.h_top h1 {
+  position: absolute;
+  left: 10px;
+  top: 45px;
+}
+
+.h_top h1 img {width: 210px;}
+
+.total_btn {
+  left: auto;
+  right: 5px;
+  top: 110px;
+  font-size: 2rem;
+}
+
+/* lnb서식 */
+  .h_top > .lnb {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 20px;
+  width: 300px;
+}
+
+.h_top > .lnb > ul {flex-wrap: nowrap;}
+
+.h_top > .lnb > ul > li {background: none;}
+
+/* 검색폼 서식 */
+  fieldset {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  left: auto;
+  width: 500px;
+  text-align: right;
+}
+
+/* gnb 서식 */
+  .h_bottom {
+  width: 100%;
+  height: 58px;
+  background: rgba(255,255,255,.9);
+  position: absolute;
+  top: 120px;
+  left: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.h_bottom:hover {height: 330px;}
+
+.gnb {
+  position: static;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 58px;
+  background: #4b4b4b;
+}
+
+.gnb > ul {
+  padding: 0;
+  display: flex;
+  justify-content: end;
+  /* padding-right: 1%; */
+}
+
+.gnb > ul > li {
+  border: none;
+  padding: 0 3.3%;
+  position: relative;
+  text-indent: 0;
+}
+
+.gnb > ul > li > a:hover {
+  color: #f00;
+  font-weight: 700;
+}
+
+.gnb > ul > li > ul > li a:hover {font-weight: 700;}
+
+.gnb > ul > li > a {font-size: 1rem;}
+
+/* .gnb > ul > li > a:hover{text-decoration: underline;} */
+.gnb > ul > li > a > i.fa-chevron-down {display: none;}
+
+.gnb > ul > li > a::after {
+  width: 1px;
+  height: 14px;
+  background: #fff;
+  content: "";
+  display: block;
+  position: relative;
+  top: -33px;
+  left: -40px;
+}
+
+.gnb > ul > li:last-child {padding-right: 0;}
+
+.gnb > ul > li:first-child > a::after {display: none;}
+
+.c_btn {display: none;}
+
+/* 서브메뉴 서식 */
+.sub {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 240px;
+  padding: 15px 0;
+  /* background: rgba(255,255,255,.9); */
+  text-align: center;
+  line-height: 210%;
+}
+
+.sub a {
+  /* padding: 0px 3%; */
+  font-size: 0.95rem;
+  line-height: 220%;
+}
+
+.sub a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* main */
+main {padding-top: 138px;}
+
+section.s_story{padding-bottom: 0px;}
+
+.s_story > h2{
+  display: block; 
+  text-align: center;
+  background: #32a18f;
+}
+
+/* 우리이야기 탭메뉴 서식 */
+.s_lnb > ul{
+  width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  justify-content: space-around;
+}
+
+.s_lnb > ul > li > a{
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.s_lnb > ul > li > a:focus{
+  color: #9d6849;
+}
+
+.s_lnb > ul > li > a:focus::after{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #9d6849;
+  transform: translateY(2px);
+}
+
+.our_story{
+  margin: 0px auto;
+  width: 1200px;
+}
+
+.our_credo{
+  width: 100%;
+  padding: 30px 0px;
+  background: #da291c;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* footer 서식 */
+footer{background: #989898;}
+
+.f_top{
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  line-height: 50px;
+}
+
+.f_nav {
+  width: 35%;
+  background: #989898;
+  line-height: 50px;
+}
+
+.f_top > dl {
+  width: 65%;
+  line-height: 50px;
+}
+
+.f_top > dl > dt{
+  padding-top: 11px;
+}
+
+.f_top > dl > dd{
+  padding-top: 20px;
+}
+
+.f_bottom{
+  background: #3a3a3a;
+}
+
+.f_bottom > ul{
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.f_bottom > ul > li:first-child{order: 1; width: 150%;}
+.f_bottom > ul > li:nth-child(2){order: 2; width: 150%;}
+.f_bottom > ul > li:nth-child(3){order: 4;}
+.f_bottom > ul > li:last-child{order: 3;}
+
+.f_bottom select, .f_bottom li:nth-child(3) a{position: absolute;}
+
+.f_bottom select {
+  width: 200px;
+  right: 40px;
+  top: 30px;
+}
+
+.f_bottom li:nth-child(3) a {
+  right: 40px;
+  top: 80px;
+}
+
+.f_bottom li:nth-child(3) a:first-child {transform: translateX(-100px);} 
+
+.f_bottom li:nth-child(3) a:nth-child(2) {transform: translateX(-50px);}
+
+}
